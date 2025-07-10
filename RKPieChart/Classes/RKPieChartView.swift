@@ -125,6 +125,13 @@ public class RKPieChartView: UIView {
         backgroundColor = .clear
     }
     
+    public func populate(items: [RKPieChartItem], centerTitle: String? = nil) {
+        self.items = items
+        self.centerTitle = centerTitle
+        calculateAngles()
+        backgroundColor = .clear
+    }
+    
     public override func layoutSubviews() {
         super.layoutSubviews()
         if !isTitleViewHidden {
