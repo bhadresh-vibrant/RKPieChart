@@ -13,7 +13,7 @@ protocol Configurable {
     var item: RKPieChartItem { get set }
 }
 
-class RKChartTitleView: UIView, Configurable {
+class RKChartTitleView: UIView, @preconcurrency Configurable {
     
     var item: RKPieChartItem
     

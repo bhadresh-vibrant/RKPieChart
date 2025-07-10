@@ -163,7 +163,7 @@ public class RKPieChartView: UIView {
                 shapeLayer.fillColor = UIColor.clear.cgColor
                 
                 if let lineCap = (LineCapStyle(rawValue: Int(style.rawValue))?.description) {
-                    shapeLayer.lineCap = lineCap
+                    shapeLayer.lineCap = CAShapeLayerLineCap(rawValue: lineCap)
                 }
                 
                 layer.addSublayer(shapeLayer)
